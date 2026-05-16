@@ -6,19 +6,28 @@ Benchmark of 8 tabular data models (4 tree-based + 4 deep learning) on 10 standa
 本项目在10个标准OpenML表格数据集上，系统复现并对比了8个主流机器学习模型的性能，包括4种树模型和4种深度学习模型，旨在量化不同模型在表格数据上的表现差异与数据量效应。
 
 ## 实验设计
-### 数据集（按样本量从小到大排序）
-| 数据集 | 任务类型 | 样本量 | 特征数 |
-|--------|----------|--------|--------|
-| diabetes | 二分类 | 768 | 8 |
-| credit-g | 二分类 | 1000 | 20 |
-| electricity | 二分类 | 45312 | 8 |
-| eye_movements | 二分类 | 10936 | 26 |
-| covertype | 多分类 | 581012 | 54 |
-| Higgs | 二分类 | 98050 | 28 |
-| jannis | 多分类 | 83733 | 54 |
-| MiniBooNE | 二分类 | 130064 | 50 |
-| pol | 回归 | 15000 | 26 |
-| house_16H | 回归 | 22784 | 16 |
+### 数据集（共10个，5个分类 + 5个回归）
+#### 分类数据集（5个）
+| Dataset | OpenML ID | Samples | Features | Description |
+|---------|-----------|---------|----------|-------------|
+| diabetes | name: diabetes | 768 | 8 | Pima Indians Diabetes |
+| credit-g | name: credit-g | 1,000 | 20 | German Credit |
+| MagicTelescope | suite 337, task 361065 | 13,376 | 10 | MAGIC Gamma Telescope |
+| credit-default | suite 337, task 361055 | 16,714 | 10 | Credit Default |
+| MiniBooNE | suite 337, task 361068 | 72,998 | 50 | MiniBooNE particle identification |
+
+#### 回归数据集（5个）
+| Dataset | OpenML ID | Samples | Features | Description |
+|---------|-----------|---------|----------|-------------|
+| boston | name: boston | 506 | 13 | Boston Housing |
+| wine_quality | suite 336, task 361076 | 6,497 | 11 | Wine Quality |
+| superconduct | suite 336, task 361088 | 21,263 | 79 | Superconductivity |
+| fried | name: fried | 40,768 | 10 | Friedman (synthetic) |
+| diamonds | suite 336, task 361080 | 53,940 | 6 | Diamonds Price |
+
+### 评估指标
+- 分类任务：ROC-AUC (Area Under the ROC Curve)
+- 回归任务：R² Score (Coefficient of Determination)
 
 ### 对比模型
 #### 树模型
