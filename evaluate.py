@@ -11,7 +11,7 @@ plt.rcParams['font.sans-serif'] = ['DejaVu Sans']
 plt.rcParams['axes.unicode_minus'] = False
 plt.rcParams['font.size'] = 10
 
-# ===================== 统一配色 =====================
+# ===================== 统一配色（树模型绿色，深度学习橙红）=====================
 color_map = {
     # 树模型（绿色系）
     "RandomForest": "#2E7D32",
@@ -29,7 +29,7 @@ color_map = {
 with open("D:/vscode项目/Tabular-benchmark/results/results.json", "r", encoding="utf-8") as f:
     results = json.load(f)
 
-# ===================== 统一数据预处理 =====================
+# ===================== 统一数据预处理（加入train_time）=====================
 rows = []
 for dataset_name, data_info in results.items():
     n_samples = data_info["n_samples"]
@@ -41,7 +41,8 @@ for dataset_name, data_info in results.items():
             "n_samples": n_samples,
             "model": model_name,
             "model_type": model_res["model_type"],
-            "score": model_res["score"]
+            "score": model_res["score"],
+            "train_time": model_res["train_time"]  # 加入训练时间
         })
 df = pd.DataFrame(rows)
 df = df.sort_values("n_samples", ascending=True).reset_index(drop=True)
@@ -75,7 +76,7 @@ def plot_figure1():
     plt.tight_layout()
     plt.savefig("figures/figure1_model_comparison.png", dpi=300, bbox_inches="tight")
     plt.close()
-    print("✅ Figure1 已保存")
+    print("✅ Figure1 性能对比图 已保存")
 
 # ==============================================================================
 # Figure 2: 模型平均排名
@@ -109,7 +110,7 @@ def plot_figure2():
     plt.tight_layout()
     plt.savefig("figures/figure2_average_ranking.png", dpi=300, bbox_inches="tight")
     plt.close()
-    print("✅ Figure2 已保存")
+    print("✅ Figure2 平均排名图 已保存")
 
 # ==============================================================================
 # Figure 3: 树模型 vs 深度学习 性能差距散点图
@@ -141,7 +142,35 @@ def plot_figure3():
     plt.tight_layout()
     plt.savefig("figures/figure3_gap_scatter.png", dpi=300, bbox_inches="tight")
     plt.close()
-    print("✅ Figure3 已保存")
+    print("✅ Figure3 数据量效应图 已保存")
+
+# ==============================================================================
+# Figure 4: 训练时间对比图（新增，风格100%统一）
+# ==============================================================================
+def plot_figure4():
+    # 先打印统计信息
+    print("\n📊 训练时间统计：")
+    print(df.groupby("model")["train_time"].mean().sort_values().round(2))
+    print("\n树模型平均训练时间：", df[df["model_type"]=="tree-based"]["train_time"].mean().round(2), "秒")
+    print("深度学习平均训练时间：", df[df["model_type"]=="deep-learning"]["train_time"].mean().round(2), "秒")
+
+    fig, ax = plt.subplots(figsize=(16, 7))
+    
+    sns.barplot(data=df, x="dataset", y="train_time", hue="model", palette=color_map, 
+                ax=ax, edgecolor="white", linewidth=0.6)
+    
+    ax.set_yscale("log")  # 对数刻度，解决时间差距过大问题
+    ax.set_title("Training Time Comparison Across All Datasets (Log Scale)", fontweight="bold", fontsize=13)
+    ax.set_ylabel("Training Time (Seconds, Log Scale)", fontsize=11)
+    ax.set_xlabel("")
+    ax.tick_params(axis="x", rotation=45)
+    ax.legend(bbox_to_anchor=(1.01, 1), loc="upper left", fontsize=8)
+    ax.grid(axis='y', alpha=0.3)
+
+    plt.tight_layout()
+    plt.savefig("figures/figure4_training_time.png", dpi=300, bbox_inches="tight")
+    plt.close()
+    print("✅ Figure4 训练时间对比图 已保存")
 
 # ==============================================================================
 # 一键运行所有图
@@ -150,8 +179,10 @@ if __name__ == "__main__":
     import os
     os.makedirs("figures", exist_ok=True)
 
-    print("🚀 开始生成所有图表...")
+    print("🚀 开始生成所有4张学术图表...\n")
     plot_figure1()
     plot_figure2()
     plot_figure3()
-    print("\n🎉 所有图片生成完成！已保存到 figures/ 文件夹")
+    plot_figure4()
+    print("\n🎉 所有4张图表生成完成！已保存到 figures/ 文件夹")
+    print("\n💡 提示：4张图配色、风格、字体完全统一，直接插入PPT即可！")
