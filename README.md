@@ -50,7 +50,7 @@ Benchmark of 8 tabular data models (4 tree-based + 4 deep learning) on 10 standa
 ![Average Ranking](figures/figure2_average_ranking.png)
 - **整体最佳**：XGBoost
 - **第二名**：LightGBM
-- **最佳深度学习模型**：FT-Transformer
+- **最佳深度学习模型**：MLP
 
 ### 3. 数据量与性能差距
 ![Performance Gap vs Dataset Size](figures/figure3_gap_scatter.png)
