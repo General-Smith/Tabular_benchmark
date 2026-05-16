@@ -58,6 +58,12 @@ Benchmark of 8 tabular data models (4 tree-based + 4 deep learning) on 10 standa
 - 大数据集：深度学习与树模型的差距显著缩小
 - FT-Transformer在大数据集上性能接近树模型
 
+### 4. 模型训练时间差距
+![Training Time](figures/figure4_training_time.png)
+- 深度学习训练时长明显长于树模型
+- FT-Transformer总是耗时最高的
+- RandomForest在树模型中平均耗时最高
+
 ## 运行方式
 ### 环境配置
 ```bash
