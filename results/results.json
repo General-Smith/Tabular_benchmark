@@ -1,0 +1,472 @@
+{
+  "diabetes": {
+    "task_type": "classification",
+    "n_samples": 768,
+    "n_features": 8,
+    "models": {
+      "RandomForest": {
+        "score": 0.8117592592592593,
+        "train_time": 0.15684914588928223,
+        "model_type": "tree-based"
+      },
+      "XGBoost": {
+        "score": 0.82,
+        "train_time": 0.0408787727355957,
+        "model_type": "tree-based"
+      },
+      "LightGBM": {
+        "score": 0.8233333333333334,
+        "train_time": 0.036559104919433594,
+        "model_type": "tree-based"
+      },
+      "CatBoost": {
+        "score": 0.8262962962962963,
+        "train_time": 0.12326478958129883,
+        "model_type": "tree-based"
+      },
+      "MLP": {
+        "score": 0.8211111111111111,
+        "train_time": 0.3903064727783203,
+        "model_type": "deep-learning"
+      },
+      "ResNet": {
+        "score": 0.8148148148148148,
+        "train_time": 0.43412208557128906,
+        "model_type": "deep-learning"
+      },
+      "FT-Transformer": {
+        "score": 0.8444444444444444,
+        "train_time": 2.6404664516448975,
+        "model_type": "deep-learning"
+      },
+      "TabNet": {
+        "score": 0.7283333333333333,
+        "train_time": 1.1461710929870605,
+        "model_type": "deep-learning"
+      }
+    }
+  },
+  "credit-g": {
+    "task_type": "classification",
+    "n_samples": 1000,
+    "n_features": 20,
+    "models": {
+      "RandomForest": {
+        "score": 0.7870833333333334,
+        "train_time": 0.14345073699951172,
+        "model_type": "tree-based"
+      },
+      "XGBoost": {
+        "score": 0.8063095238095238,
+        "train_time": 0.042453765869140625,
+        "model_type": "tree-based"
+      },
+      "LightGBM": {
+        "score": 0.7830952380952381,
+        "train_time": 0.03553485870361328,
+        "model_type": "tree-based"
+      },
+      "CatBoost": {
+        "score": 0.8171428571428572,
+        "train_time": 0.16635870933532715,
+        "model_type": "tree-based"
+      },
+      "MLP": {
+        "score": 0.76,
+        "train_time": 0.22522377967834473,
+        "model_type": "deep-learning"
+      },
+      "ResNet": {
+        "score": 0.794047619047619,
+        "train_time": 0.30699706077575684,
+        "model_type": "deep-learning"
+      },
+      "FT-Transformer": {
+        "score": 0.7825000000000001,
+        "train_time": 2.282766342163086,
+        "model_type": "deep-learning"
+      },
+      "TabNet": {
+        "score": 0.7289285714285714,
+        "train_time": 1.3588757514953613,
+        "model_type": "deep-learning"
+      }
+    }
+  },
+  "MagicTelescope": {
+    "task_type": "classification",
+    "n_samples": 13376,
+    "n_features": 10,
+    "models": {
+      "RandomForest": {
+        "score": 0.9289744861594287,
+        "train_time": 0.2932617664337158,
+        "model_type": "tree-based"
+      },
+      "XGBoost": {
+        "score": 0.9292800311019057,
+        "train_time": 0.07617521286010742,
+        "model_type": "tree-based"
+      },
+      "LightGBM": {
+        "score": 0.9278964208230833,
+        "train_time": 0.06605744361877441,
+        "model_type": "tree-based"
+      },
+      "CatBoost": {
+        "score": 0.9219838189654593,
+        "train_time": 0.2996048927307129,
+        "model_type": "tree-based"
+      },
+      "MLP": {
+        "score": 0.9320450173272469,
+        "train_time": 8.933109998703003,
+        "model_type": "deep-learning"
+      },
+      "ResNet": {
+        "score": 0.9279369180960807,
+        "train_time": 7.979451656341553,
+        "model_type": "deep-learning"
+      },
+      "FT-Transformer": {
+        "score": 0.9292046223866691,
+        "train_time": 87.5562481880188,
+        "model_type": "deep-learning"
+      },
+      "TabNet": {
+        "score": 0.9244354400852621,
+        "train_time": 20.23306369781494,
+        "model_type": "deep-learning"
+      }
+    }
+  },
+  "credit-default": {
+    "task_type": "classification",
+    "n_samples": 16714,
+    "n_features": 10,
+    "models": {
+      "RandomForest": {
+        "score": 0.8527212023857588,
+        "train_time": 0.25491976737976074,
+        "model_type": "tree-based"
+      },
+      "XGBoost": {
+        "score": 0.8618417473420781,
+        "train_time": 0.07410693168640137,
+        "model_type": "tree-based"
+      },
+      "LightGBM": {
+        "score": 0.8610442991762088,
+        "train_time": 0.08163309097290039,
+        "model_type": "tree-based"
+      },
+      "CatBoost": {
+        "score": 0.8632780846354502,
+        "train_time": 0.26128101348876953,
+        "model_type": "tree-based"
+      },
+      "MLP": {
+        "score": 0.8249123451275487,
+        "train_time": 8.077005624771118,
+        "model_type": "deep-learning"
+      },
+      "ResNet": {
+        "score": 0.817255160506129,
+        "train_time": 7.469070911407471,
+        "model_type": "deep-learning"
+      },
+      "FT-Transformer": {
+        "score": 0.8265990482162646,
+        "train_time": 23.892096519470215,
+        "model_type": "deep-learning"
+      },
+      "TabNet": {
+        "score": 0.8212406117300759,
+        "train_time": 20.618598222732544,
+        "model_type": "deep-learning"
+      }
+    }
+  },
+  "MiniBooNE": {
+    "task_type": "classification",
+    "n_samples": 72998,
+    "n_features": 50,
+    "models": {
+      "RandomForest": {
+        "score": 0.979426487145806,
+        "train_time": 4.720540285110474,
+        "model_type": "tree-based"
+      },
+      "XGBoost": {
+        "score": 0.9831204728842186,
+        "train_time": 0.6786246299743652,
+        "model_type": "tree-based"
+      },
+      "LightGBM": {
+        "score": 0.9824144492400075,
+        "train_time": 0.45266175270080566,
+        "model_type": "tree-based"
+      },
+      "CatBoost": {
+        "score": 0.9799209232501407,
+        "train_time": 1.2264163494110107,
+        "model_type": "tree-based"
+      },
+      "MLP": {
+        "score": 0.9831764496153125,
+        "train_time": 64.19043374061584,
+        "model_type": "deep-learning"
+      },
+      "ResNet": {
+        "score": 0.97396626008632,
+        "train_time": 20.948230028152466,
+        "model_type": "deep-learning"
+      },
+      "FT-Transformer": {
+        "score": 0.9806160536686057,
+        "train_time": 1805.637241601944,
+        "model_type": "deep-learning"
+      },
+      "TabNet": {
+        "score": 0.9368650403452806,
+        "train_time": 35.5753653049469,
+        "model_type": "deep-learning"
+      }
+    }
+  },
+  "boston": {
+    "task_type": "regression",
+    "n_samples": 506,
+    "n_features": 13,
+    "models": {
+      "RandomForest": {
+        "score": 0.8922508558535107,
+        "train_time": 0.09563064575195312,
+        "model_type": "tree-based"
+      },
+      "XGBoost": {
+        "score": 0.8942029393507264,
+        "train_time": 0.04514956474304199,
+        "model_type": "tree-based"
+      },
+      "LightGBM": {
+        "score": 0.8782783575441907,
+        "train_time": 0.019021034240722656,
+        "model_type": "tree-based"
+      },
+      "CatBoost": {
+        "score": 0.850648857935633,
+        "train_time": 0.12976908683776855,
+        "model_type": "tree-based"
+      },
+      "MLP": {
+        "score": 0.8243435537434606,
+        "train_time": 0.35299110412597656,
+        "model_type": "deep-learning"
+      },
+      "ResNet": {
+        "score": 0.8207917161168413,
+        "train_time": 0.5664613246917725,
+        "model_type": "deep-learning"
+      },
+      "FT-Transformer": {
+        "score": 0.797515335005653,
+        "train_time": 2.8878252506256104,
+        "model_type": "deep-learning"
+      },
+      "TabNet": {
+        "score": 0.6602745167196911,
+        "train_time": 1.3048858642578125,
+        "model_type": "deep-learning"
+      }
+    }
+  },
+  "wine_quality": {
+    "task_type": "regression",
+    "n_samples": 6497,
+    "n_features": 11,
+    "models": {
+      "RandomForest": {
+        "score": 0.49718520459177784,
+        "train_time": 0.2176799774169922,
+        "model_type": "tree-based"
+      },
+      "XGBoost": {
+        "score": 0.4528335928916931,
+        "train_time": 0.06967687606811523,
+        "model_type": "tree-based"
+      },
+      "LightGBM": {
+        "score": 0.4499021153724919,
+        "train_time": 0.06365013122558594,
+        "model_type": "tree-based"
+      },
+      "CatBoost": {
+        "score": 0.3945545038310353,
+        "train_time": 0.19900226593017578,
+        "model_type": "tree-based"
+      },
+      "MLP": {
+        "score": 0.3996374011039734,
+        "train_time": 2.811641216278076,
+        "model_type": "deep-learning"
+      },
+      "ResNet": {
+        "score": 0.3646754026412964,
+        "train_time": 2.697378635406494,
+        "model_type": "deep-learning"
+      },
+      "FT-Transformer": {
+        "score": 0.3788970112800598,
+        "train_time": 25.206263065338135,
+        "model_type": "deep-learning"
+      },
+      "TabNet": {
+        "score": 0.32750433683395386,
+        "train_time": 6.774433612823486,
+        "model_type": "deep-learning"
+      }
+    }
+  },
+  "superconduct": {
+    "task_type": "regression",
+    "n_samples": 21263,
+    "n_features": 79,
+    "models": {
+      "RandomForest": {
+        "score": 0.929313289800167,
+        "train_time": 5.538794040679932,
+        "model_type": "tree-based"
+      },
+      "XGBoost": {
+        "score": 0.9198418910435732,
+        "train_time": 0.3536837100982666,
+        "model_type": "tree-based"
+      },
+      "LightGBM": {
+        "score": 0.9162369327992504,
+        "train_time": 0.1635730266571045,
+        "model_type": "tree-based"
+      },
+      "CatBoost": {
+        "score": 0.8816316813188069,
+        "train_time": 0.5898549556732178,
+        "model_type": "tree-based"
+      },
+      "MLP": {
+        "score": 0.9005941022100141,
+        "train_time": 22.45976448059082,
+        "model_type": "deep-learning"
+      },
+      "ResNet": {
+        "score": 0.9065102912865949,
+        "train_time": 32.945683002471924,
+        "model_type": "deep-learning"
+      },
+      "FT-Transformer": {
+        "score": 0.8841210585449059,
+        "train_time": 1247.6259167194366,
+        "model_type": "deep-learning"
+      },
+      "TabNet": {
+        "score": 0.8621527303019956,
+        "train_time": 45.24198889732361,
+        "model_type": "deep-learning"
+      }
+    }
+  },
+  "fried": {
+    "task_type": "regression",
+    "n_samples": 40768,
+    "n_features": 10,
+    "models": {
+      "RandomForest": {
+        "score": 0.9337465533820283,
+        "train_time": 1.7416868209838867,
+        "model_type": "tree-based"
+      },
+      "XGBoost": {
+        "score": 0.9532144416328656,
+        "train_time": 0.13333511352539062,
+        "model_type": "tree-based"
+      },
+      "LightGBM": {
+        "score": 0.9531796921657006,
+        "train_time": 0.09016227722167969,
+        "model_type": "tree-based"
+      },
+      "CatBoost": {
+        "score": 0.9555970141918736,
+        "train_time": 0.3079204559326172,
+        "model_type": "tree-based"
+      },
+      "MLP": {
+        "score": 0.9568670960461909,
+        "train_time": 27.739487648010254,
+        "model_type": "deep-learning"
+      },
+      "ResNet": {
+        "score": 0.9551196362092549,
+        "train_time": 29.130197763442993,
+        "model_type": "deep-learning"
+      },
+      "FT-Transformer": {
+        "score": 0.9540030484180587,
+        "train_time": 63.184528827667236,
+        "model_type": "deep-learning"
+      },
+      "TabNet": {
+        "score": 0.9529804303723856,
+        "train_time": 29.33842372894287,
+        "model_type": "deep-learning"
+      }
+    }
+  },
+  "diamonds": {
+    "task_type": "regression",
+    "n_samples": 53940,
+    "n_features": 6,
+    "models": {
+      "RandomForest": {
+        "score": 0.9424016636767018,
+        "train_time": 1.0035521984100342,
+        "model_type": "tree-based"
+      },
+      "XGBoost": {
+        "score": 0.9479324249863065,
+        "train_time": 0.11267471313476562,
+        "model_type": "tree-based"
+      },
+      "LightGBM": {
+        "score": 0.9478622781680762,
+        "train_time": 0.09814929962158203,
+        "model_type": "tree-based"
+      },
+      "CatBoost": {
+        "score": 0.9453385304065732,
+        "train_time": 0.3320157527923584,
+        "model_type": "tree-based"
+      },
+      "MLP": {
+        "score": 0.9394490681068081,
+        "train_time": 25.117745637893677,
+        "model_type": "deep-learning"
+      },
+      "ResNet": {
+        "score": 0.944746064206837,
+        "train_time": 23.695133686065674,
+        "model_type": "deep-learning"
+      },
+      "FT-Transformer": {
+        "score": 0.9461102141540998,
+        "train_time": 210.46694469451904,
+        "model_type": "deep-learning"
+      },
+      "TabNet": {
+        "score": 0.9443084004184243,
+        "train_time": 51.92092776298523,
+        "model_type": "deep-learning"
+      }
+    }
+  }
+}
